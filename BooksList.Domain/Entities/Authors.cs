@@ -13,4 +13,6 @@ public class Authors : Entity
     public string Name { get; set; }
 
     public string SurName { get; set; }
+    
+    public ICollection<Books> Books { get; private set; }
 }
