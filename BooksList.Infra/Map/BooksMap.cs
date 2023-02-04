@@ -11,5 +11,7 @@ public class BooksMap : IEntityTypeConfiguration<Books>
         builder.HasKey(x => x.Id);
         builder.Property(x => x.Name).HasMaxLength(300).IsRequired();
         builder.Property(x => x.DateLaunched).IsRequired();
+        builder.HasOne<Authors>(x => x.Author).WithMany(x => x.Books)
+            .HasForeignKey(x => x.AuthorId).OnDelete(DeleteBehavior.Cascade);
     }
 }

@@ -8,6 +8,8 @@ public class AuthorsMap : IEntityTypeConfiguration<Authors>
 {
     public void Configure(EntityTypeBuilder<Authors> builder)
     {
-        throw new NotImplementedException();
+        builder.HasKey(x => x.Id);
+        builder.Property(x => x.Name).HasMaxLength(100).IsRequired();
+        builder.Property(x => x.SurName).HasMaxLength(100).IsRequired();
     }
 }

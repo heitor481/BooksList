@@ -8,6 +8,7 @@ public class Authors : Entity
     {
         this.Name = name;
         this.SurName = surName;
+        this.Books = new List<Books>();
     }
 
     public string Name { get; set; }
