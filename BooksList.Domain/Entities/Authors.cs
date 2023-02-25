@@ -4,6 +4,10 @@ namespace BooksList.Domain.Entities;
 
 public class Authors : Entity
 {
+    public Authors()
+    {
+        
+    }
     public Authors(string name, string surName)
     {
         this.Name = name;

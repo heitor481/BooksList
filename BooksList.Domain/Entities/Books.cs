@@ -5,6 +5,11 @@ namespace BooksList.Domain.Entities;
 
 public class Books : Entity
 {
+    public Books()
+    {
+        
+    }
+
     public Books(string name, DateTime dateLaunched, Authors author)
     {
         this.Name = name;
